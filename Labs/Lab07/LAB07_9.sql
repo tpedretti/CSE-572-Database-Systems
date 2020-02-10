@@ -1,0 +1,1 @@
+select e.first_name, e.last_name, e.hire_date from employees e join employees d on (d.last_name = 'Davies') where e.hire_date > d.hire_date;

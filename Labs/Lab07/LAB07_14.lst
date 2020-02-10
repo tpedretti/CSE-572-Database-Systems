@@ -1,0 +1,76 @@
+SQL> REM LAB07_12
+SQL> REM Pedretti, Taylor
+SQL> @LAB07_13.sql
+
+View created.
+
+SQL> select * from dept50;
+PRESS RETURN TO CONTINUE
+     EMPNO EMPLOYEE                      DEPTNO                                                                                     
+---------- ------------------------- ----------                                                                                     
+       198 OConnell                          50                                                                                     
+       199 Grant                             50                                                                                     
+       120 Weiss                             50                                                                                     
+       121 Fripp                             50                                                                                     
+       122 Kaufling                          50                                                                                     
+       123 Vollman                           50                                                                                     
+       124 Mourgos                           50                                                                                     
+       125 Nayer                             50                                                                                     
+       126 Mikkilineni                       50                                                                                     
+       127 Landry                            50                                                                                     
+       128 Markle                            50                                                                                     
+       129 Bissot                            50                                                                                     
+       130 Atkinson                          50                                                                                     
+       131 Marlow                            50                                                                                     
+       132 Olson                             50                                                                                     
+       133 Mallin                            50                                                                                     
+       134 Rogers                            50                                                                                     
+       135 Gee                               50                                                                                     
+       136 Philtanker                        50                                                                                     
+       137 Ladwig                            50                                                                                     
+       138 Stiles                            50                                                                                     
+       139 Seo                               50                                                                                     
+       140 Patel                             50                                                                                     
+       141 Rajs                              50                                                                                     
+       142 Davies                            50                                                                                     
+       143 Matos                             50                                                                                     
+       144 Vargas                            50                                                                                     
+PRESS RETURN TO CONTINUE
+     EMPNO EMPLOYEE                      DEPTNO                                                                                     
+---------- ------------------------- ----------                                                                                     
+       180 Taylor                            50                                                                                     
+       181 Fleaur                            50                                                                                     
+       182 Sullivan                          50                                                                                     
+       183 Geoni                             50                                                                                     
+       184 Sarchand                          50                                                                                     
+       185 Bull                              50                                                                                     
+       186 Dellinger                         50                                                                                     
+       187 Cabrio                            50                                                                                     
+       188 Chung                             50                                                                                     
+       189 Dilly                             50                                                                                     
+       190 Gates                             50                                                                                     
+       191 Perkins                           50                                                                                     
+       192 Bell                              50                                                                                     
+       193 Everett                           50                                                                                     
+       194 McCain                            50                                                                                     
+       195 Jones                             50                                                                                     
+       196 Walsh                             50                                                                                     
+       197 Feeney                            50                                                                                     
+
+45 rows selected.
+
+SQL> select view_name, text from user_views;
+PRESS RETURN TO CONTINUE
+VIEW_NAME                      TEXT                                                                                                 
+------------------------------ --------------------------------------------------------------------------------                     
+DEPT50                         select e.employee_id as "EMPNO", e.last_name as "EMPLOYEE", e.department_id as "                     
+EMPLOYEES_VU                   select e.employee_id, e.first_name || ' ' ||e.last_name as "EMPLOYEE", e.departm                     
+
+SQL> update dept50 set deptno=80 where employee='Matos';
+update dept50 set deptno=80 where employee='Matos'
+       *
+ERROR at line 1:
+ORA-01031: insufficient privileges 
+
+
+SQL> Spool off

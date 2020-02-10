@@ -1,0 +1,47 @@
+Question 1:
+select last_name, HR.EMPLOYEES.department_id, DEPARTMENT_NAME from HR.EMPLOYEES, HR.DEPARTMENTS WHERE HR.EMPLOYEES.department_id = HR.DEPARTMENTS.department_id;
+
+Question 2:
+select e.job_id, d.department_id from hr.employees e, hr.departments d where e.department_id=d.department_id and e.department_id=80;
+
+Question 3:
+select e.last_name, d.department_name, d.location_id, l.city from hr.employees e, hr.departments d, hr.locations l where e.department_id=d.department_id and e.COMMISSION_PCT>0.0;
+
+Question 4:
+select e.last_name, d.department_name from hr.employees e, hr.departments d where e.department_id=d.department_id and e.last_name like '%a%';
+
+Question 5:
+select e.last_name, j.job_title, e.department_id, d.department_name from hr.employees e, hr.jobs j, hr.departments d, hr.locations l where e.department_id=d.department_id and d.location_id=l.location_id and l.city='Toronto';
+
+Question 6:
+select e.last_name as "EMPLOYEE" , e.employee_id "EMP#", m.last_name "MANAGER", m.manager_id "MGR#" from hr.employees e join hr.employees m on (e.manager_id = m.employee_id);
+
+Question 7:
+select e.last_name as "EMPLOYEE" , e.employee_id "EMP#", m.last_name "MANAGER", m.manager_id "MGR#" from hr.employees e left outer join hr.employees m on (e.manager_id = m.employee_id);
+
+Question 8:
+select e.last_name, e.job_id, d.department_name, e.salary, j.grade_level from hr.employees e, hr.departments d, job_grades j where e.department_id = d.department_id and (e.salary between j.lowest_sal and j.highest_sal);
+
+Question 9:
+select e.first_name, e.last_name, e.hire_date from employees e join employees d on (d.last_name = 'Davies') where e.hire_date > d.hire_date;
+
+Question 10:
+select e.first_name || ' ' || e.last_name as "Employee", e.hire_date as "Emp Hired", m.first_name || ' ' || m.last_name as "Manager", m.hire_date as "Mgr Hired" from employees e join employees m on (e.manager_id = m.employee_id) where e.hire_date < m.hire_date;
+
+Question 11:
+create view /* LAB07_11 Taylor, Pedretti */ employees_vu as select e.employee_id, e.first_name || ' ' ||e.last_name as "EMPLOYEE", e.department_id from employees e;
+
+Question 12:
+REM Pedretti, Taylor
+LAB07_11.sql
+select view_name, text from user_views;
+select employee, department_id from employees_vu;
+
+Question 13:
+create view /* LAB07_13 Pedretti, Taylor */ dept50 as select e.employee_id as "EMPNO", e.last_name as "EMPLOYEE", e.department_id as "DEPTNO" from employees e, departments d where (e.department_id=d.department_id) and d.department_id=50;
+
+Question 14:
+REM Pedretti, Taylor
+@LAB07_13.sql
+select view_name, text from user_views;
+update dept50 set deptno=80 where employee='Matos';

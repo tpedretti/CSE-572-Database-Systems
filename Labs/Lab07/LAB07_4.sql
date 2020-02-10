@@ -1,0 +1,1 @@
+select e.last_name, d.department_name from hr.employees e, hr.departments d where e.department_id=d.department_id and e.last_name like '%a%';

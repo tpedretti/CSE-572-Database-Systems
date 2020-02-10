@@ -1,0 +1,1 @@
+select d.department_name "Name", d.location_id "Location", count(*)"Number of Workers", round(avg(e.salary),2) "Average Salary" from departments d, employees e where e.department_id=d.department_id group by d.department_name,d.location_id;

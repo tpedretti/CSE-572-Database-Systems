@@ -1,0 +1,1 @@
+select e.job_id, d.department_id from hr.employees e, hr.departments d where e.department_id=d.department_id and e.department_id=80;

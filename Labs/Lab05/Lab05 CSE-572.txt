@@ -1,0 +1,47 @@
+CREATE TABLE emp(
+	empNo int NOT NULL,
+	fname VARCHAR2(255),
+	lname VARCHAR2(255),
+	address VARCHAR2(255),
+	sex CHAR(1),
+	salary number(6,2),
+	postition VARCHAR2(255),
+	deptNo VARCHAR2(2)	
+);
+
+CREATE TABLE dept(
+	deptNo int NOT NULL,
+	deptName VARCHAR2(255),
+	mgr int NOT NULL
+);
+
+CREATE TABLE proj(
+	proNumber number(2),
+	projName VARCHAR2(255),
+	deptNo int NOT NULL
+);
+
+CREATE TABLE emp_proj (
+	empNo int,
+	projNo int,
+	hoursWorked int	
+);
+
+ALTER TABLE table_name ADD column_name column_definition;
+
+//----EMP
+ALTER TABLE emp ADD CONSTRAINT emp_pk PRIMARY KEY (empNo);
+ALTER TABLE emp ADD CONSTRAINT salary CHECK(salary<12000);
+ALTER TABLE emp ADD CONSTRAINT deptNo_Col FOREIGN KEY (deptNo) REFERENCES dept (deptNo);
+
+//----DEPT
+ALTER TABLE dept ADD CONSTRAINT dept_pk PRIMARY KEY (deptNo);
+
+//----PROJ
+ALTER TABLE proj ADD CONSTRAINT proj_pk PRIMARY KEY (proNumber);
+ALTER TABLE proj ADD CONSTRAINT proj_Col FOREIGN KEY (deptNo) REFERENCES dept (deptNo);
+
+
+//----EMP_PROJ
+ALTER TABLE emp_proj ADD CONSTRAINT empNo_Col FOREIGN KEY (empNo) REFERENCES emp (empNo);
+ALTER TABLE emp_proj ADD CONSTRAINT projNo_Col FOREIGN KEY (projNo) REFERENCES proj (proNumber);

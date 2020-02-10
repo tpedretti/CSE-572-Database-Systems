@@ -1,0 +1,2 @@
+ALTER TABLE emp_proj ADD CONSTRAINT empNo_Col FOREIGN KEY (empNo) REFERENCES emp (empNo);
+ALTER TABLE emp_proj ADD CONSTRAINT projNo_Col FOREIGN KEY (projNo) REFERENCES proj (proNumber);

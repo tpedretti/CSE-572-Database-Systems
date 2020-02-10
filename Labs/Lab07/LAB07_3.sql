@@ -1,0 +1,1 @@
+select e.last_name, d.department_name, d.location_id, l.city from hr.employees e, hr.departments d, hr.locations l where e.department_id=d.department_id and e.COMMISSION_PCT>0.0;

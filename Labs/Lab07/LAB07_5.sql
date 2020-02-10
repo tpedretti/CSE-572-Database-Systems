@@ -1,0 +1,1 @@
+select e.last_name, j.job_title, e.department_id, d.department_name from hr.employees e, hr.jobs j, hr.departments d, hr.locations l where e.department_id=d.department_id and d.location_id=l.location_id and l.city='Toronto';

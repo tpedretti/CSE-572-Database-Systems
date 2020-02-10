@@ -1,0 +1,1 @@
+create view /* LAB07_11 Taylor, Pedretti */ employees_vu as select e.employee_id, e.first_name || ' ' ||e.last_name as "EMPLOYEE", e.department_id from employees e;

@@ -1,0 +1,9 @@
+SQL> desc USER_CATALOG
+ Name                                                                     Null?    Type
+ ------------------------------------------------------------------------ -------- -------------------------------------------------
+ TABLE_NAME                                                               NOT NULL VARCHAR2(30)
+ TABLE_TYPE                                                                        VARCHAR2(11)
+
+SQL> sloop off
+SP2-0042: unknown command "sloop off" - rest of line ignored.
+SQL> spool off

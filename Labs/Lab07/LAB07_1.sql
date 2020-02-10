@@ -1,0 +1,1 @@
+select last_name, HR.EMPLOYEES.department_id, department_name from HR.EMPLOYEES, HR.DEPARTMENTS WHERE HR.EMPLOYEES.department_id = HR.DEPARTMENTS.department_id;

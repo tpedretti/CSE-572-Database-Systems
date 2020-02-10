@@ -1,0 +1,20 @@
+Question 1:
+select round(max(salary)) "Maximum", round(min(salary)) "Minimum", round(sum(salary)) "Sum", round(avg(salary)) "Average" from hr.employees;
+
+Question 2:
+select job_id, round(max(salary)) "Maximum", round(min(salary)) "Minimum", round(sum(salary)) "Sum", round(avg(salary)) "Average" from hr.employees group by job_id;
+
+Question 3:
+select job_id, count(*) from hr.employees group by job_id;
+
+Question 4:
+select count(distinct manager_id) "Number of Managers" from hr.employees;
+
+Question 5:
+select max(salary) - min(salary) difference from employees;
+
+Question 6:
+select manager_id, min(salary) from hr.employees where manager_id is not null group by manager_id having min(salary) > 6000 order by min(salary) desc;
+
+Question 7:
+select d.department_name "Name", d.location_id "Location", count(*)"Number of Workers", round(avg(e.salary),2) "Average Salary" from departments d, employees e where e.department_id=d.department_id group by d.department_name,d.location_id;

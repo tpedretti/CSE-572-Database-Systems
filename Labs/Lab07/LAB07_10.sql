@@ -1,0 +1,1 @@
+select e.first_name || ' ' || e.last_name as "Employee", e.hire_date as "Emp Hired", m.first_name || ' ' || m.last_name as "Manager", m.hire_date as "Mgr Hired" from employees e join employees m on (e.manager_id = m.employee_id) where e.hire_date < m.hire_date;

@@ -1,0 +1,136 @@
+SQL> REM LAB07_12
+SQL> REM Pedretti, Taylor
+SQL> @LAB07_11.sql
+
+View created.
+
+SQL> select view_name, text from user_views;
+PRESS RETURN TO CONTINUE
+VIEW_NAME                      TEXT                                                                                                 
+------------------------------ --------------------------------------------------------------------------------                     
+EMPLOYEES_VU                   select e.employee_id, e.first_name || ' ' ||e.last_name as "EMPLOYEE", e.departm                     
+
+SQL> select employee, department_id from employees_vu;
+PRESS RETURN TO CONTINUE
+EMPLOYEE                                       DEPARTMENT_ID                                                                        
+---------------------------------------------- -------------                                                                        
+Donald OConnell                                           50                                                                        
+Douglas Grant                                             50                                                                        
+Jennifer Whalen                                           10                                                                        
+Michael Hartstein                                         20                                                                        
+Pat Fay                                                   20                                                                        
+Susan Mavris                                              40                                                                        
+Hermann Baer                                              70                                                                        
+Shelley Higgins                                          110                                                                        
+William Gietz                                            110                                                                        
+Steven King                                               90                                                                        
+Neena Kochhar                                             90                                                                        
+Lex De Haan                                               90                                                                        
+Alexander Hunold                                          60                                                                        
+Bruce Ernst                                               60                                                                        
+David Austin                                              60                                                                        
+Valli Pataballa                                           60                                                                        
+Diana Lorentz                                             60                                                                        
+Nancy Greenberg                                          100                                                                        
+Daniel Faviet                                            100                                                                        
+John Chen                                                100                                                                        
+Ismael Sciarra                                           100                                                                        
+Jose Manuel Urman                                        100                                                                        
+Luis Popp                                                100                                                                        
+Den Raphaely                                              30                                                                        
+Alexander Khoo                                            30                                                                        
+Shelli Baida                                              30                                                                        
+Sigal Tobias                                              30                                                                        
+PRESS RETURN TO CONTINUE
+EMPLOYEE                                       DEPARTMENT_ID                                                                        
+---------------------------------------------- -------------                                                                        
+Guy Himuro                                                30                                                                        
+Karen Colmenares                                          30                                                                        
+Matthew Weiss                                             50                                                                        
+Adam Fripp                                                50                                                                        
+Payam Kaufling                                            50                                                                        
+Shanta Vollman                                            50                                                                        
+Kevin Mourgos                                             50                                                                        
+Julia Nayer                                               50                                                                        
+Irene Mikkilineni                                         50                                                                        
+James Landry                                              50                                                                        
+Steven Markle                                             50                                                                        
+Laura Bissot                                              50                                                                        
+Mozhe Atkinson                                            50                                                                        
+James Marlow                                              50                                                                        
+TJ Olson                                                  50                                                                        
+Jason Mallin                                              50                                                                        
+Michael Rogers                                            50                                                                        
+Ki Gee                                                    50                                                                        
+Hazel Philtanker                                          50                                                                        
+Renske Ladwig                                             50                                                                        
+Stephen Stiles                                            50                                                                        
+John Seo                                                  50                                                                        
+Joshua Patel                                              50                                                                        
+Trenna Rajs                                               50                                                                        
+Curtis Davies                                             50                                                                        
+Randall Matos                                             50                                                                        
+Peter Vargas                                              50                                                                        
+PRESS RETURN TO CONTINUE
+EMPLOYEE                                       DEPARTMENT_ID                                                                        
+---------------------------------------------- -------------                                                                        
+John Russell                                              80                                                                        
+Karen Partners                                            80                                                                        
+Alberto Errazuriz                                         80                                                                        
+Gerald Cambrault                                          80                                                                        
+Eleni Zlotkey                                             80                                                                        
+Peter Tucker                                              80                                                                        
+David Bernstein                                           80                                                                        
+Peter Hall                                                80                                                                        
+Christopher Olsen                                         80                                                                        
+Nanette Cambrault                                         80                                                                        
+Oliver Tuvault                                            80                                                                        
+Janette King                                              80                                                                        
+Patrick Sully                                             80                                                                        
+Allan McEwen                                              80                                                                        
+Lindsey Smith                                             80                                                                        
+Louise Doran                                              80                                                                        
+Sarath Sewall                                             80                                                                        
+Clara Vishney                                             80                                                                        
+Danielle Greene                                           80                                                                        
+Mattea Marvins                                            80                                                                        
+David Lee                                                 80                                                                        
+Sundar Ande                                               80                                                                        
+Amit Banda                                                80                                                                        
+Lisa Ozer                                                 80                                                                        
+Harrison Bloom                                            80                                                                        
+Tayler Fox                                                80                                                                        
+William Smith                                             80                                                                        
+PRESS RETURN TO CONTINUE
+EMPLOYEE                                       DEPARTMENT_ID                                                                        
+---------------------------------------------- -------------                                                                        
+Elizabeth Bates                                           80                                                                        
+Sundita Kumar                                             80                                                                        
+Ellen Abel                                                80                                                                        
+Alyssa Hutton                                             80                                                                        
+Jonathon Taylor                                           80                                                                        
+Jack Livingston                                           80                                                                        
+Kimberely Grant                                                                                                                     
+Charles Johnson                                           80                                                                        
+Winston Taylor                                            50                                                                        
+Jean Fleaur                                               50                                                                        
+Martha Sullivan                                           50                                                                        
+Girard Geoni                                              50                                                                        
+Nandita Sarchand                                          50                                                                        
+Alexis Bull                                               50                                                                        
+Julia Dellinger                                           50                                                                        
+Anthony Cabrio                                            50                                                                        
+Kelly Chung                                               50                                                                        
+Jennifer Dilly                                            50                                                                        
+Timothy Gates                                             50                                                                        
+Randall Perkins                                           50                                                                        
+Sarah Bell                                                50                                                                        
+Britney Everett                                           50                                                                        
+Samuel McCain                                             50                                                                        
+Vance Jones                                               50                                                                        
+Alana Walsh                                               50                                                                        
+Kevin Feeney                                              50                                                                        
+
+107 rows selected.
+
+SQL> Spool off

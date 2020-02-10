@@ -1,0 +1,1 @@
+select job_id, count(*) from hr.employees group by job_id;

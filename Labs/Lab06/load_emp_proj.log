@@ -1,0 +1,58 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Sun Feb 24 17:09:38 2019
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   load_emp_proj.ctl
+Data File:      load_emp_proj.dat
+  Bad File:     load_emp_proj.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table EMP_PROJ, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMPNO                               FIRST     *   /       CHARACTER            
+PROJNO                               NEXT     *   /       CHARACTER            
+HOURSWORKED                          NEXT     *   /       CHARACTER            
+
+Record 1: Rejected - Error on table EMP_PROJ, column EMPNO.
+ORA-01722: invalid number
+
+Record 3: Rejected - Error on table EMP_PROJ.
+ORA-02291: integrity constraint (TPEDRETTI.PROJNO_COL) violated - parent key not found
+
+Record 5: Rejected - Error on table EMP_PROJ.
+ORA-02291: integrity constraint (TPEDRETTI.PROJNO_COL) violated - parent key not found
+
+
+Table EMP_PROJ:
+  5 Rows successfully loaded.
+  3 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  49536 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             8
+Total logical records rejected:         3
+Total logical records discarded:        0
+
+Run began on Sun Feb 24 17:09:38 2019
+Run ended on Sun Feb 24 17:09:41 2019
+
+Elapsed time was:     00:00:02.28
+CPU time was:         00:00:00.02

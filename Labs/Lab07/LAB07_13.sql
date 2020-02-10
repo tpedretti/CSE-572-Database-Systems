@@ -1,0 +1,1 @@
+create view /* LAB07_13 Pedretti, Taylor */ dept50 as select e.employee_id as "EMPNO", e.last_name as "EMPLOYEE", e.department_id as "DEPTNO" from employees e, departments d where (e.department_id=d.department_id) and d.department_id=50;
